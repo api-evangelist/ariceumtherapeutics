@@ -1,23 +1,60 @@
 aid: ariceumtherapeutics
+
 name: Ariceumtherapeutics
-description: 'Ariceumtherapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Ariceumtherapeutics is a biotech company focused on developing innovative radiopharmaceutical therapies for rare cancers. The firm aims to leverage cutting‑edge molecular targeting and imaging technologies to create precision treatments that improve patient outcomes while minimizing side effects. As a relatively new entrant in the oncology space, Ariceumtherapeutics is building its pipeline through collaborations with academic institutions and seeks to expand its clinical trial portfolio in the coming years.'
+
 url: https://raw.githubusercontent.com/api-evangelist/ariceumtherapeutics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Biotechnology
+- Oncology
+- Radiopharmaceuticals
+- ClinicalTrials
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/ariceumtherapeutics-llms.txt
+- type: Hosts
+  url: hosts/ariceumtherapeutics-hosts.yml
+- type: DomainSecurity
+  url: security/ariceumtherapeutics-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/ariceumtherapeutics
+  url: http://ariceumtherapeutics.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The company website returns a JavaScript shell with no machine‑readable API documentation.
+  evidence:
+    - url: http://ariceumtherapeutics.com
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
